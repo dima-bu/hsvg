@@ -1,29 +1,33 @@
 # hsvg
 Angular directive for work with svg sprites
 
-```javascript
-    .directive('hsvg', ['$compile', function($compile) {
-        return {
-            restrict: 'E',
-            replace: true,
-            scope: {
-                cssclass: '@class',
-                hsvghref: '@hsvghref',
-                ngClass: '='
-            },
+# how it use
 
-            template: "<svg class='{{cssclass}}'><use xlink:href='{{href}} '/></svg>",
 
-            link: function(scope, element, attrs, template) {
-                scope.href = '#icon-' + scope.hsvghref;
-
-            }
-        }
-    }]);
+For run grunt we should set it global
+```
+    npm install -g grunt-cli
 ```
 
-```html
-    <div ng-repeat="iconhref in iconsHrefs">
-        <hsvg hsvghref="{{iconhref}}" class="md-size icon"></hsvg>
-    </div>
+Then get npm packets
 ```
+    npm install
+```
+
+We add svg icons to /svg folder and when we run
+
+ ```
+ grunt
+
+```
+- we create ./html-parts/sprite.html file with svg sprite, after that we complite html from parts - index.html
+
+
+We have directive #hsvg
+
+```
+<hsvg hsvghref="airport" class="lg-size airport-icon icon"></hsvg>
+```
+
+#hsvghref - name of svg file in ./svg
+#class - css class, we can add fill propperty for add bg color of icon

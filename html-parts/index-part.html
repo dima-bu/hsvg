@@ -9,10 +9,12 @@
 
 </head>
 <body ng-controller="Controller">
-    <div style="display: none;">
+    <div style="height: 0; overflow: hidden;">
         include "sprite.html"
     </div>
     <h1>HSVG directive АngularJS</h1>
+
+    <hsvg hsvghref="airport" class="lg-size airport-icon icon"></hsvg>
 
     <div ng-repeat="iconhref in iconsHrefs">
         <hsvg hsvghref="{{iconhref}}" class="md-size icon"></hsvg>
