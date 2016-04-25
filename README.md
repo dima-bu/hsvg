@@ -1,4 +1,4 @@
-### hsvg
+## hsvg
 Angular directive for work with svg sprites
 
 ### how it use
@@ -26,11 +26,25 @@ We create ./html-parts/sprite.html file with svg sprite, after that we complite 
 We have directive hsvg
 
 ```
-<hsvg hsvghref="airport" class="lg-size airport-icon icon"></hsvg>
+<hsvg hsvghref="airport" class="lg-size airport-icon"></hsvg>
 ```
 
 #### hsvghref
-    name of svg file in ./svg
+    -- name of svg file in ./svg folder
 
 #### class
-    css class, we can add fill property for add bg color of icon
+    -- css class, we can add fill property for add bg color of icon
+
+``` css
+
+.lg-size {
+    width: 50px;
+    height : 50px;
+}
+
+.airport-icon {
+    fill: gray;
+}
+
+
+```
