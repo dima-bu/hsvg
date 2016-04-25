@@ -1,6 +1,9 @@
 ## hsvg
 Angular directive for work with svg sprites
 
+[Demo page] (http://dima-bu.github.io/hsvg-example/index.html)
+
+
 ### how it use
 
 
@@ -45,6 +48,5 @@ We have directive hsvg - [hsvg.js](./js/hsvg.js)
 .airport-icon {
     fill: gray;
 }
-
 
 ```
