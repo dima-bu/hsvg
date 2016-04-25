@@ -23,7 +23,7 @@ We add svg icons to /svg folder and when we run
 We create ./html-parts/sprite.html file with svg sprite, after that we complite html from parts
 
 
-We have directive hsvg
+We have directive hsvg - [hsvg.js](./js/hsvg.js)
 
 ```
 <hsvg hsvghref="airport" class="lg-size airport-icon"></hsvg>

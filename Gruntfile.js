@@ -23,6 +23,15 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            options: {
+                separator: '.'
+            },
+            dist: {
+                src: ['js/controller.js', 'js/icons.js', 'js/hsvg.js'],
+                dest: 'app.js'
+            }
+        },
         includes: {
             files: {
                 src: ['./html-parts/index-part.html'], // Source files
@@ -37,6 +46,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-svgstore');
     grunt.loadNpmTasks('grunt-includes');
-    grunt.registerTask('default',  ['svgstore', 'includes']);
+    grunt.loadNpmTasks('grunt-contrib-concat');
+
+    grunt.registerTask('default',  ['svgstore', 'concat', 'includes']);
 
 };
